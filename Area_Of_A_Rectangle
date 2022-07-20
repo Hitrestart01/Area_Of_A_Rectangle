@@ -1,0 +1,44 @@
+/**********************************************************************
+	*Method Name    : XXXXXX
+	*Author         : Kevin Zwart 
+	*Due Date       : 7/15/2022
+	*Program Description: Simple program, gathers 2 inputs from user and 
+	*determines the area of a rectangle
+**********************************************************************/
+
+import java.util.Scanner;
+
+public class Area 
+{
+	
+	public static void main(String[] args) 
+	
+	{
+		
+    int side_1;
+    int side_2;
+    int sum_1;
+    int sum_2;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Enter 2 sides of the rectangle"); 
+          side_1 = input.nextInt();
+          side_2 = input.nextInt(); 
+
+        while (side_1 < 0 || side_2 < 0)
+        {       
+            System.out.println("Enter 2 sides of the rectangle"); 
+            side_1 = input.nextInt();
+            side_2 = input.nextInt();
+        }
+        if (side_1 > 0 && side_2 > 0)
+        {
+            sum_1 = (side_1*2) + (side_2*2);
+            sum_2 = (side_1 * side_2);
+            System.out.println("The perimeter of the rectangle is " + sum_1);
+            System.out.println("The area of the rectangle is " +sum_2);
+        }  
+	           
+	}
+}
